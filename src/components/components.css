@@ -515,30 +515,26 @@ h3 {
   display: none;
 }
 
-@media (max-width: 890px) {
+@media (max-width: 790px) {
   .not-available {
     display: block;
     justify-content: center;
     align-items: center;
-    background-color: #efaf0b;
-    color: white;
-    box-shadow: 2px 2px 15px #efaf0b;
+    color: #efaf0b;
     border-radius: 10px;
     padding: 10px;
-    animation: glo 2s linear infinite;
+    padding-bottom: 10rem;
   }
 
   @keyframes glo {
-    0%,
-    100% {
-      box-shadow: 2px 2px 13px #efae0bce;
-    }
     50% {
-      box-shadow: 2px 2px 25px #efaf0b;
+      color: white;
+      text-shadow: 2px 2px 15px #ffffff;
     }
   }
 
   .not-available h1 {
-    text-shadow: 2px 2px 15px #ffffff;
+    text-shadow: 2px 2px 15px #efaf0b;
+    animation: glo 19s linear infinite;
   }
 }
