@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const roles = [
   "Graphic Designer",
-  "Data Analysis",
+  "Data Analyst",
   "UI UX Designer",
   "Creative Thinker",
   "Problem Solver",
@@ -12,12 +12,20 @@ function Introduction() {
   const [currentRole, setCurrentRole] = useState(0);
 
   useEffect(() => {
+    // Start the animation when the component mounts
+    document.querySelector(".role").style.animationPlayState = "running";
+
+    // Interval to change the role every 2 seconds
     const interval = setInterval(() => {
       setCurrentRole((prevRole) => (prevRole + 1) % roles.length);
-    }, 2000);
+    }, 2000); // 2000ms matches the CSS animation duration
 
-    return () => clearInterval(interval);
-  }, []);
+    // Clean up the interval on component unmount
+    return () => {
+      clearInterval(interval);
+      document.querySelector(".role").style.animationPlayState = "paused";
+    };
+  }, [roles.length]);
 
   return (
     <div className="container-intro">
@@ -56,13 +64,21 @@ function Introduction() {
 
             <div className="socials">
               <div className="s-in-con">
-                <img src="Component1.png" alt="x-logo" />
-                <img src="Component3.png" alt="facebook-logo" />
-                <img src="Component4.png" alt="instagram-logo" />
+                <a href="#">
+                  <img src="Component1.png" alt="x-logo" />
+                </a>
+                <a href="#">
+                  <img src="Component3.png" alt="facebook-logo" />
+                </a>
+                <a href="#">
+                  <img src="Component4.png" alt="instagram-logo" />
+                </a>
               </div>
             </div>
 
-            <button>Download CV</button>
+            <a href="img1.png" download>
+              <button>Download CV</button>
+            </a>
           </div>
           <div className="into-image">
             <div style={{ position: "relative" }}>
@@ -71,12 +87,15 @@ function Introduction() {
                 alt="hidden-photo"
                 style={{ width: "110%" }}
               />
-              <img
-                src="PFP.png"
-                alt="hidden-photo"
+              <div
+                style={{
+                  position: "absolute",
+                  right: "-10px",
+                }}
                 className="difi"
-                style={{ position: "absolute" }}
-              />
+              >
+                <img src="PFP.png" alt="hidden-photo" />
+              </div>
             </div>
           </div>
         </div>

@@ -39,14 +39,16 @@
 
 .role {
   display: flex;
-  width: 40%;
+  width: 35%;
   animation: close 2s ease-in-out infinite;
+  animation-play-state: paused;
+  animation-delay: 1s;
 }
 
 @keyframes close {
   0%,
   100% {
-    width: 40%;
+    width: 35%;
   }
   50% {
     width: 1px;
@@ -57,13 +59,19 @@
   max-width: 8.125rem;
 }
 
+@media (max-width: 500px) {
+  .into-image {
+    display: none;
+  }
+}
+
 .difi {
   transition: 500ms ease-in-out;
-  transform: translateX(50px);
+  transform: rotate(0.3deg);
 }
 
 .into-image:hover .difi {
-  transform: translateX(290px) translateY(26px);
+  transform: translateX(265px) translateY(40px);
 }
 
 /* End of Header */
@@ -131,11 +139,14 @@ h3 {
 }
 
 .socials .s-in-con {
-  width: 3rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 3rem;
+  flex-direction: row;
+  gap: 3.1rem;
+}
+.socials .s-in-con a {
+  width: 3rem;
 }
 
 .into-text .socials img {
@@ -496,4 +507,38 @@ h3 {
 .footer-content button:hover {
   background-color: #efaf0b;
   box-shadow: 2px 2px 15px rgba(239, 174, 11, 0.815);
+}
+
+/* End of Footer */
+
+.not-available {
+  display: none;
+}
+
+@media (max-width: 890px) {
+  .not-available {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #efaf0b;
+    color: white;
+    box-shadow: 2px 2px 15px #efaf0b;
+    border-radius: 10px;
+    padding: 10px;
+    animation: glo 2s linear infinite;
+  }
+
+  @keyframes glo {
+    0%,
+    100% {
+      box-shadow: 2px 2px 13px #efae0bce;
+    }
+    50% {
+      box-shadow: 2px 2px 25px #efaf0b;
+    }
+  }
+
+  .not-available h1 {
+    text-shadow: 2px 2px 15px #ffffff;
+  }
 }

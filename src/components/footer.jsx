@@ -33,7 +33,7 @@ function Footer() {
                   <textarea
                     name="message"
                     id="message"
-                    maxlength="200"
+                    maxLength="200"
                     rows="4"
                     cols="50"
                     placeholder="Your Message"

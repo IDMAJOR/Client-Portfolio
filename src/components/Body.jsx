@@ -5,19 +5,23 @@ import Introduction from "./Introduction";
 import About from "./About";
 import Services from "./Services";
 import Projects from "./Projects";
+import NotAvailable from "./NotAvailable";
 
 function Body() {
   return (
-    <div>
-      <NavBar />
-      <div>
-        <Introduction />
-        <About />
-        <Services />
-        <Projects />
+    <>
+      <div className="view">
+        <NavBar />
+        <div>
+          <Introduction />
+          <About />
+          <Services />
+          <Projects />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+      <NotAvailable />
+    </>
   );
 }
 
