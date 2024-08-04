@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const roles = [
   "Graphic Designer",
@@ -10,10 +10,13 @@ const roles = [
 
 function Introduction() {
   const [currentRole, setCurrentRole] = useState(0);
+  const roleRef = useRef(null);
 
   useEffect(() => {
     // Start the animation when the component mounts
-    document.querySelector(".role").style.animationPlayState = "running";
+    if (roleRef.current) {
+      roleRef.current.style.animationPlayState = "running";
+    }
 
     // Interval to change the role every 2 seconds
     const interval = setInterval(() => {
@@ -23,12 +26,14 @@ function Introduction() {
     // Clean up the interval on component unmount
     return () => {
       clearInterval(interval);
-      document.querySelector(".role").style.animationPlayState = "paused";
+      if (roleRef.current) {
+        roleRef.current.style.animationPlayState = "paused";
+      }
     };
   }, [roles.length]);
 
   return (
-    <div className="container-intro">
+    <div className="container-intro" id="home">
       <section id="introduction">
         <div className="introduction-con">
           <div className="into-text">
@@ -43,9 +48,10 @@ function Introduction() {
                   gap: "0.5rem",
                 }}
               >
-                i'm a{" "}
+                I'm a{" "}
                 <span
                   className="role"
+                  ref={roleRef}
                   style={{ color: "#efaf0b", borderRight: "1px solid white" }}
                 >
                   {roles[currentRole]}
@@ -76,7 +82,7 @@ function Introduction() {
               </div>
             </div>
 
-            <a href="img1.png" download>
+            <a href="NwaneriProsper-WPSOfficeportfolio1.docx" download>
               <button>Download CV</button>
             </a>
           </div>
@@ -85,7 +91,7 @@ function Introduction() {
               <img
                 src="Group6.png"
                 alt="hidden-photo"
-                style={{ width: "110%" }}
+                style={{ width: "83%" }}
               />
               <div
                 style={{

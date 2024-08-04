@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Services() {
   return (
-    <div className="service-container">
+    <div className="service-container" id="ser">
       <section id="service">
         <div className="service-content">
           <div className="service-title-container">
@@ -26,7 +27,9 @@ function Services() {
                     communicate...
                   </p>
                 </div>
-                <button>Read More</button>
+                <Link to="/aboutG">
+                  <button>Read More</button>
+                </Link>
               </div>
             </div>
             <div className="box">
@@ -42,7 +45,9 @@ function Services() {
                     creativity...
                   </p>
                 </div>
-                <button>Read More</button>
+                <Link to="/aboutU">
+                  <button>Read More</button>
+                </Link>
               </div>
             </div>
             <div className="box">
@@ -58,7 +63,9 @@ function Services() {
                     data into...
                   </p>
                 </div>
-                <button>Read More</button>
+                <Link to="/aboutD">
+                  <button>Read More</button>
+                </Link>
               </div>
             </div>
           </div>

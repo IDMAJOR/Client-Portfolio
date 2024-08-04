@@ -4,6 +4,9 @@
 
 .nav-container {
   width: 100%;
+  position: fixed;
+  z-index: 1000;
+  background-color: #282632;
 }
 
 .nav-container nav {
@@ -11,7 +14,7 @@
   justify-content: center;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem;
+  padding: 0.5rem 2rem;
   font-family: "Sen", sans-serif;
 }
 
@@ -78,6 +81,7 @@
 
 .container-intro {
   width: 100%;
+  padding-top: 15%;
 }
 
 .introduction {
@@ -91,7 +95,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem;
+  padding: 1rem 3rem;
 }
 
 .into-text {
@@ -99,7 +103,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  width: 100%;
+  width: 60%;
 }
 
 .text {
@@ -282,7 +286,7 @@ h3 {
 /* End of About */
 
 .service-container {
-  padding-top: 1.5rem;
+  padding-top: 2.5rem;
   padding-bottom: 5.5rem;
   width: 100%;
 }
@@ -372,7 +376,7 @@ h3 {
 
 .project-container {
   width: 100%;
-  padding-top: 1.5rem;
+  padding-top: 2.5rem;
   padding-bottom: 5.5rem;
   background-color: #342f32;
 }
@@ -400,6 +404,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  overflow: hidden;
 }
 
 .images .image-div {
@@ -411,6 +416,10 @@ h3 {
 }
 
 /* End of Projects */
+
+.footer-container {
+  padding-top: 2.5rem;
+}
 
 .footer-contain {
   width: 100%;
@@ -465,6 +474,7 @@ h3 {
 .text-area-detail textarea {
   width: 59.2375rem;
   height: 21.5625rem;
+  margin-top: 1rem;
   padding: 10px 15px;
   outline: none;
   border: none;
@@ -537,4 +547,68 @@ h3 {
     text-shadow: 2px 2px 15px #efaf0b;
     animation: glo 19s linear infinite;
   }
+}
+
+.h-m-s {
+  cursor: cell;
+}
+
+.h-m-s:hover {
+  color: #efaf0b;
+  transform: translateY(-6px);
+}
+
+.image-div {
+  position: relative; /* Make sure this is relative to position the absolute child */
+  padding: 1rem;
+  overflow: hidden; /* Hide overflowed content */
+}
+
+.h-translate {
+  width: 21.01rem;
+  background-color: #efaf0b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #efae0b 10%, transparent 85%);
+  transform: translateY(195px);
+  transition: transform 500ms ease-in-out;
+  position: absolute;
+  bottom: 0; /* Ensure it stays within bounds */
+}
+
+.image-div:hover .h-translate {
+  transform: translateY(-40px);
+}
+
+.h-translate h5 {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
+}
+
+.h-translate p {
+  font-size: 0.9rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.h-translate button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 50%;
+  width: 3rem;
+  border: none;
+  color: white;
+  background-color: white;
+}
+
+.fullscreen-img {
+  width: 50vw; /* Adjust width to your preference */
+  height: auto;
+  object-fit: contain; /* Keeps aspect ratio and fits within viewport */
 }

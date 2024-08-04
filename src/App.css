@@ -10,6 +10,7 @@ body {
   padding: 0;
   background-color: #282632;
   color: white;
+  scroll-behavior: smooth;
 }
 
 button {
@@ -33,4 +34,29 @@ a {
   .view {
     display: none;
   }
+}
+
+img {
+  transition: 300ms ease-in-out;
+}
+
+img:hover {
+  scale: 1.05;
+}
+
+.box {
+  transition: 300ms ease-in-out;
+  border: 3px solid #efae0b00;
+}
+
+.box:hover {
+  border: 3px solid #efae0b8e;
+}
+
+.s-in-con img {
+  border-radius: 50%;
+}
+
+.s-in-con img:hover {
+  box-shadow: 1px 1px 15px #efaf0b;
 }

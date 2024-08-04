@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as Ar } from "react-router-dom";
 
 function About() {
   return (
@@ -25,8 +26,9 @@ function About() {
                 </p>
               </div>
             </div>
-
-            <button>Learn More</button>
+            <Ar to="/about">
+              <button>Learn More</button>
+            </Ar>
           </div>
         </div>
       </section>
