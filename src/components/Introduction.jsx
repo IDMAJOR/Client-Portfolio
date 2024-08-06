@@ -70,13 +70,13 @@ function Introduction() {
 
             <div className="socials">
               <div className="s-in-con">
-                <a href="#">
+                <a href="https://x.com/tiv_ity/">
                   <img src="Component1.png" alt="x-logo" />
                 </a>
-                <a href="#">
+                <a href="https://www.facebook.com/share/cgTbNXGfezsQwxSM/?mibextid=qi2Omg">
                   <img src="Component3.png" alt="facebook-logo" />
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/tiv_ity_?igsh=MWpsam5jeWI0cDl2Mw==">
                   <img src="Component4.png" alt="instagram-logo" />
                 </a>
               </div>
