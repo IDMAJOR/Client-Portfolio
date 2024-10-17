@@ -22,7 +22,7 @@ function Footer() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:3000/send-email", formData)
+      .post("https://port-back-rjvt.onrender.com", formData)
       .then((response) => {
         alert("Message sent successfully!");
         setFormData({
