@@ -28,7 +28,7 @@ function Services() {
                   </p>
                 </div>
                 <Link to="/aboutG">
-                  <button>Read More</button>
+                  <button>View More</button>
                 </Link>
               </div>
             </div>
@@ -46,7 +46,7 @@ function Services() {
                   </p>
                 </div>
                 <Link to="/aboutU">
-                  <button>Read More</button>
+                  <button>View More</button>
                 </Link>
               </div>
             </div>
@@ -64,7 +64,7 @@ function Services() {
                   </p>
                 </div>
                 <Link to="/aboutD">
-                  <button>Read More</button>
+                  <button>View More</button>
                 </Link>
               </div>
             </div>

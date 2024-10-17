@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./components.css";
 import { useNavigate } from "react-router-dom";
 
 function AboutD() {
+  const [clicked, setClicked] = useState(false);
   const navigate = useNavigate();
 
   const handleGoBack = () => {
@@ -26,8 +27,13 @@ function AboutD() {
     wrapLetters();
   }, []);
 
-  const text =
-    "Combining a strong foundation in Statistics with a keen eye for detail, I specialize in Data Analytics, transforming raw data into actionable insights. My analytical expertise is complemented by a proficiency in tools such as MS Excel, Power BI, and SQL, enabling me to dissect complex datasets and provide clear, data-driven recommendations. In my role as a data analyst, I have worked on various projects that require meticulous data collection, analysis, and visualization. I believe in the power of data to inform strategic decisions and drive business success, always striving to uncover meaningful patterns and trends that can lead to informed actions.";
+  const text = `Combining a strong foundation in Statistics with a keen eye for detail, 
+                I specialize in Data Analytics, transforming raw data
+                into actionable insights. My analytical expertise is complemented by a proficiency
+                in tools such as MS Excel, Power BI, and SQL, enabling me to dissect complex datasets
+                and provide clear, data-driven recommendations. I believe in the power of data to inform strategic
+                decisions and drive business success, always striving to uncover meaningful patterns and trends that 
+                can lead to informed actions.`;
 
   return (
     <div>
@@ -49,6 +55,17 @@ function AboutD() {
             />
             <h1>Data Analytics</h1>
           </div>
+          <img
+            src="/CERTIFICATE  DATA, PROSPER (1).jpg"
+            alt="CERTIFICATE"
+            style={{
+              width: "100%",
+              height: "100%",
+              maxWidth: !clicked ? 450 : 800,
+              margin: "10px 0px",
+            }}
+            onClick={() => setClicked(!clicked)}
+          />
           <div
             style={{
               display: "flex",

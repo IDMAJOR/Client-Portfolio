@@ -59,11 +59,12 @@ function Introduction() {
               </h3>
               <div className="bio">
                 <p>
-                  Proficient in Adobe XD, Figma, MS Word, Excel, Power BI, and
-                  SQL, I thrive on tackling complex design challenges. My
-                  approach is rooted in thorough research, iterative
-                  prototyping, and rigorous user testing, always striving to
-                  find the perfect balance between creativity and practicality.
+                  Proficient in Adobe Photoshop, Adobe XD, Figma, MS Word,
+                  Excel, Power BI, and SQL, I thrive on tackling complex design
+                  challenges. My approach is rooted in thorough research,
+                  iterative prototyping, and rigorous user testing, always
+                  striving to find the perfect balance between creativity and
+                  practicality.
                 </p>
               </div>
             </div>
