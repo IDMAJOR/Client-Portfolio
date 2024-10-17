@@ -63,6 +63,7 @@ function AboutD() {
               height: "100%",
               maxWidth: !clicked ? 450 : 800,
               margin: "10px 0px",
+              cursor: "pointer",
             }}
             onClick={() => setClicked(!clicked)}
           />
